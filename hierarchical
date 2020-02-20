@@ -1,0 +1,13 @@
+WITH TABLE1 AS 
+(
+SELECT credited_branch, sales_count
+FROM sbx_us_pcba_cent__common_data.sps_cumulative_output_f2020
+LIMIT 10
+),
+TABLE2 AS
+(
+SELECT credited_branch, sales_count
+FROM TABLE1
+)
+SELECT *
+FROM TABLE2
